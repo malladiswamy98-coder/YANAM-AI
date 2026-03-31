@@ -18,7 +18,7 @@ genai.configure(api_key=API_KEY)
 
 # Automatic ga model ni vethukuntundhi
 try:
-    model = genai.GenerativeModel('gemini-pro')
+    model = genai.GenerativeModel('gemini-1.5-flash')
 except:
     model = genai.GenerativeModel('gemini-1.5-flash')
 
