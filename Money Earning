@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Breach... 💀</title>
+    <style>
+        body {
+            background-color: black;
+            color: #0f0;
+            font-family: 'Courier New', Courier, monospace;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #terminal {
+            width: 80%;
+            height: 60%;
+            border: 1px solid #0f0;
+            padding: 20px;
+            overflow-y: hidden;
+            background: rgba(0, 20, 0, 0.9);
+            box-shadow: 0 0 20px #0f0;
+        }
+        .line { margin-bottom: 5px; font-size: 14px; }
+        #final-msg {
+            display: none;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            text-shadow: 0 0 10px #0f0;
+            animation: blink 0.5s infinite;
+        }
+        @keyframes blink { 
+            0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="terminal"></div>
+    
+    <div id="final-msg">
+        <h1>SYSTEM HACKED! 🔓</h1>
+        <p>By: <b>MALLADI SWAMY</b></p>
+        <p style="color: #0f0; font-size: 20px;">"Rey em chesthunnav ra? Surprise kavalannav kadha, idhe na style!"</p>
+    </div>
+
+    <script>
+        const terminal = document.getElementById('terminal');
+        const finalMsg = document.getElementById('final-msg');
+        
+        const commands = [
+            "Initializing System Override...",
+            "Connecting to Proxy Server: 192.168.1.39",
+            "Bypassing Firewall...",
+            "Accessing Private Folders...",
+            "Decrypting WhatsApp Messages...",
+            "Downloading Gallery Photos...",
+            "System Vulnerability Found!",
+            "Injecting Malladi-Swamy-Virus.exe",
+            "Hacking Status: 10%...",
+            "Hacking Status: 45%...",
+            "Hacking Status: 82%...",
+            "Hacking Status: 100%...",
+            "FINALIZING BREACH...",
+            "DELETING SYSTEM FILES..."
+        ];
+
+        let i = 0;
+        function typeLine() {
+            if (i < commands.length) {
+                const line = document.createElement('div');
+                line.className = 'line';
+                line.innerHTML = "> " + commands[i];
+                terminal.appendChild(line);
+                i++;
+                // Scrolling effect
+                terminal.scrollTop = terminal.scrollHeight;
+                setTimeout(typeLine, 500); 
+            } else {
+                setTimeout(() => {
+                    terminal.style.display = 'none';
+                    finalMsg.style.display = 'block';
+                }, 1000);
+            }
+        }
+
+        typeLine();
+    </script>
+</body>
+</html>
