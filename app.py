@@ -10,7 +10,7 @@ st.markdown("""
     .stApp { background-color: #0f172a; color: white; }
     .stChatMessage { border-radius: 15px; margin-bottom: 10px; }
     </style>
-    """, unsafe_allow_stdio=True)
+    """, unsafe_allow_html=True)
 
 # --- API KEY SETUP ---
 API_KEY = "AIzaSyBZnBbGkF1sKGjrFp7L5UCw4a7W9vy8iUE"
